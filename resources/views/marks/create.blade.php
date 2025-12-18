@@ -8,27 +8,27 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-cloud-sun"></i> Give Marks
+                        <i class="bi bi-cloud-sun"></i> Berikan Tanda
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
-                            <li class="breadcrumb-item"><a href="{{url()->previous()}}">My courses</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Give Marks</li>
+                            <li class="breadcrumb-item"><a href="{{route('home')}}">Beranda</a></li>
+                            <li class="breadcrumb-item"><a href="{{url()->previous()}}">Mata Kuliah Saya</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Berikan Nilai</li>
                         </ol>
                     </nav>
                     @include('session-messages')
                     @if ($academic_setting['marks_submission_status'] == "on")
                     <p class="text-primary">
-                        <i class="bi bi-exclamation-diamond-fill me-2"></i> Marks Submission Window is open now.
+                        <i class="bi bi-exclamation-diamond-fill me-2"></i> Jendela Pengiriman Nilai sekarang dibuka.
                     </p>
                     @endif
                     <p class="text-primary">
-                        <i class="bi bi-exclamation-diamond-fill me-2"></i> Final Marks submission should be done only once in a Semester when the Marks Submission Window is open.
+                        <i class="bi bi-exclamation-diamond-fill me-2"></i> Pengiriman Nilai Final harus dilakukan hanya sekali dalam satu Semester ketika Jendela Pengiriman Nilai terbuka.
                     </p>
                     @if ($final_marks_submitted)
                     <p class="text-success">
-                        <i class="bi bi-exclamation-diamond-fill me-2"></i> Marks are submitted.
+                        <i class="bi bi-exclamation-diamond-fill me-2"></i> Nilai telah dikirimkan.
                     </p>
                     @endif
                     <h3><i class="bi bi-diagram-2"></i> Class #{{request()->query('class_name')}}, Section #{{request()->query('section_name')}}</h3>

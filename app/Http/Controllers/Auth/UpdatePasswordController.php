@@ -27,7 +27,7 @@ class UpdatePasswordController extends Controller
             try{
                 $this->userRepository->changePassword($request['new_password']);
 
-                return back()->with('status', 'Changing password was successful!');
+                return back()->with('status', 'Perubahan kata sandi berhasil!');
             } catch (\Exception $e) {
                 return back()->withError($e->getMessage());
             }

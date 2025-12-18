@@ -79,7 +79,7 @@ class SyllabusController extends Controller
             $syllabusRepository = new SyllabusRepository();
             $syllabusRepository->store($validatedRequest);
 
-            return back()->with('status', 'Creating syllabus was successful!');
+            return back()->with('status', 'Pembuatan silabus berhasil!');
         } catch (\Exception $e) {
             return back()->withError($e->getMessage());
         }

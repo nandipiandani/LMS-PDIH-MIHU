@@ -12,9 +12,9 @@
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
-                            <li class="breadcrumb-item"><a href="{{url()->previous()}}">My Courses</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Create Assignment</li>
+                            <li class="breadcrumb-item"><a href="{{route('home')}}">Beranda</a></li>
+                            <li class="breadcrumb-item"><a href="{{url()->previous()}}">Mata Kuliah Saya</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Buat Tugas</li>
                         </ol>
                     </nav>
                     @include('session-messages')

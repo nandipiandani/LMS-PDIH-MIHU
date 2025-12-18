@@ -22,15 +22,15 @@
                     @elseif(request()->query('section_name'))
                         <h3><i class="bi bi-diagram-2"></i> Section: {{request()->query('section_name')}} </h3>
                     @endif
-                    <div class="mt-4">Current Date and Time: {{ date('Y-m-d H:i:s') }}</div>
+                    <div class="mt-4">Tanggal dan Waktu Saat Ini: {{ date('Y-m-d H:i:s') }}</div>
                     <div class="row mt-4">
                         <div class="col bg-white border shadow-sm pt-2">
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Student Name</th>
-                                        <th scope="col">Today's Status</th>
-                                        <th scope="col">Total Attended</th>
+                                        <th scope="col">Nama Mahasiswa</th>
+                                        <th scope="col">Status Hari Ini</th>
+                                        <th scope="col">Total Kehadiran</th>
                                     </tr>
                                 </thead>
                                 <tbody>

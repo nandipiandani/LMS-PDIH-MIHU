@@ -8,13 +8,13 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-cloud-sun"></i> Course Marks
+                        <i class="bi bi-cloud-sun"></i> Nilai Mata Kuliah
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
-                            <li class="breadcrumb-item"><a href="{{url()->previous()}}">My Courses</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Course Marks</li>
+                            <li class="breadcrumb-item"><a href="{{route('home')}}">Beranda</a></li>
+                            <li class="breadcrumb-item"><a href="{{url()->previous()}}">Mata Kuliah Saya</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Nilai Mata Kuliah</li>
                         </ol>
                     </nav>
                     <h5>Course: {{$course_name}}</h5>
@@ -22,8 +22,8 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">Exam Name</th>
-                                    <th scope="col">Marks</th>
+                                    <th scope="col">Nama Ujian</th>
+                                    <th scope="col">Nilai</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -43,9 +43,9 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">Total Marks</th>
-                                    <th scope="col">Grade Points</th>
-                                    <th scope="col">Grade</th>
+                                    <th scope="col">Nilai Total</th>
+                                    <th scope="col">Poin Nilai</th>
+                                    <th scope="col">Nilai</th>
                                 </tr>
                             </thead>
                             <tbody>

@@ -236,4 +236,18 @@ class UserRepository implements UserInterface {
             throw new \Exception('Failed to change password. '.$e->getMessage());
         }
     }
+    public function deleteTeacher($id) {
+        try {
+            return User::where('id', $id)->where('role', 'teacher')->delete();
+        } catch (\Exception $e) {
+            throw new \Exception('Failed to delete Teacher. '.$e->getMessage());
+        }
+    }
+    public function deleteStudent($id) {
+        try {
+            return User::where('id', $id)->where('role', 'student')->delete();
+        } catch (\Exception $e) {
+            throw new \Exception('Failed to delete Student. '.$e->getMessage());
+        }
+    }
 }

@@ -59,8 +59,8 @@
                                 <div class="col-2">
                                     <label for="inputState" class="form-label">Gender<sup><i class="bi bi-asterisk text-primary"></i></sup></label>
                                     <select id="inputState" class="form-select" name="gender" required>
-                                        <option value="Male" {{($student->gender == 'Male')?'selected':null}}>Male</option>
-                                        <option value="Female" {{($student->gender == 'Female')?'selected':null}}>Female</option>
+                                        <option value="Male" {{($student->gender == 'Male')?'selected':null}}>Laki-laki</option>
+                                        <option value="Female" {{($student->gender == 'Female')?'selected':null}}>Perempuan</option>
                                     </select>
                                 </div>
                                 <div class="col-2">

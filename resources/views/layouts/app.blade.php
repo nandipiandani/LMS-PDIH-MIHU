@@ -7,14 +7,14 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Unifiedtransform') }}</title>
+    <title>{{ config('app.name', 'LMS PDIH MIHU') }}</title>
 
-    <link rel="shortcut icon" href="{{asset('favicon_io/favicon.ico')}}">
-    <link rel="shortcut icon" sizes="16x16" href="{{asset('favicon_io/favicon-16x16.png')}}">
-    <link rel="shortcut icon" sizes="32x32" href="{{asset('favicon_io/favicon-32x32.png')}}">
+    <link rel="shortcut icon" href="{{asset('favicon_io/favicon-mihu-unsur.ico')}}">
+    <link rel="shortcut icon" sizes="16x16" href="{{asset('favicon_io/favicon-mihu-unsur-16x16.png')}}">
+    <link rel="shortcut icon" sizes="32x32" href="{{asset('favicon_io/favicon-mihu-unsur-32x32.png')}}">
     <link rel="apple-touch-icon" href="{{asset('favicon_io/apple-touch-icon.png')}}">
-    <link rel="icon" href="{{asset('favicon_io/android-chrome-192x192.png')}}" sizes="192x192">
-    <link rel="icon" href="{{asset('favicon_io/android-chrome-512x512.png')}}" sizes="512x512">
+    <link rel="icon" href="{{asset('favicon_io/logo-mihu-unsur-192x192.png')}}" sizes="192x192">
+    <link rel="icon" href="{{asset('favicon_io/logo-mihu-unsur-512x512.png')}}" sizes="512x512">
 
     <!-- Scripts -->
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
@@ -27,13 +27,16 @@
    
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar sticky-top navbar-expand-md navbar-light bg-white border-btm-e6">
+        <nav class="navbar sticky-top navbar-expand-md navbar-light border-btm-e6" 
+     style="background: linear-gradient(135deg, #ffd900 0%, #ffd900 100%); 
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <i class="bi bi-house"></i> {{ config('app.name', 'Laravel') }}
+                    <i class="bi bi-book"></i> {{ config('app.name', 'LMS PDIH MIHU') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -56,7 +59,7 @@
                             @elseif(\App\Models\SchoolSession::latest()->count() > 0)
                                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Current Academic Session {{$current_school_session_name}}</a>
                             @else
-                                <a class="nav-link text-danger disabled" href="#" tabindex="-1" aria-disabled="true"><i class="bi bi-exclamation-diamond-fill me-2"></i> Create an Academic Session.</a>
+                                <a class="nav-link text-danger disabled" href="#" tabindex="-1" aria-disabled="true"><i class="bi bi-exclamation-diamond-fill me-2"></i> Buat Sesi Akademik.</a>
                             @endif
                         </li>
                     </ul>
@@ -66,9 +69,7 @@
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
+                              
                             @endif
                         @else
                             <li class="nav-item dropdown">
@@ -103,7 +104,7 @@
     </div>
 
     <div id="watermark">
-        <p>Unifiedtransform</p>
+        <p>LMS PDIH MIHU</p>
     </div>
 </body>
 </html>

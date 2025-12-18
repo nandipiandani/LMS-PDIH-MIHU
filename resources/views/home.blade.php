@@ -14,7 +14,7 @@
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start">
                                         <div class="ms-2 me-auto">
-                                            <div class="fw-bold"><i class="bi bi-person-lines-fill me-3"></i> Total Students</div>
+                                            <div class="fw-bold"><i class="bi bi-person-lines-fill me-3"></i> Total Mahasiswa</div>
                                         </div>
                                         <span class="badge bg-dark rounded-pill">{{$studentCount}}</span>
                                     </div>
@@ -26,7 +26,7 @@
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start">
                                         <div class="ms-2 me-auto">
-                                            <div class="fw-bold"><i class="bi bi-person-lines-fill me-3"></i> Total Teachers</div>
+                                            <div class="fw-bold"><i class="bi bi-person-lines-fill me-3"></i> Total Dosen</div>
                                         </div>
                                         <span class="badge bg-dark rounded-pill">{{$teacherCount}}</span>
                                     </div>
@@ -38,7 +38,7 @@
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start">
                                         <div class="ms-2 me-auto">
-                                            <div class="fw-bold"><i class="bi bi-diagram-3 me-3"></i> Total Classes</div>
+                                            <div class="fw-bold"><i class="bi bi-diagram-3 me-3"></i> Total Kelas</div>
                                         </div>
                                         <span class="badge bg-dark rounded-pill">{{ $classCount }}</span>
                                     </div>
@@ -61,9 +61,9 @@
                     @if($studentCount > 0)
                     <div class="mt-3 d-flex align-items-center">
                         <div class="col-3">
-                            <span class="ps-2 me-2">Students %</span>
-                            <span class="badge rounded-pill border" style="background-color: #0678c8;">Male</span>
-                            <span class="badge rounded-pill border" style="background-color: #49a4fe;">Female</span>
+                            <span class="ps-2 me-2">Mahasiswa %</span>
+                            <span class="badge rounded-pill border" style="background-color: #0678c8;">Laki-laki</span>
+                            <span class="badge rounded-pill border" style="background-color: #49a4fe;">Perempuan</span>
                         </div>
                         @php
                         $maleStudentPercentage = round(($maleStudentsBySession/$studentCount), 2) * 100;
@@ -81,21 +81,21 @@
                     <div class="row align-items-md-stretch mt-4">
                         <div class="col">
                             <div class="p-3 text-white bg-dark rounded-3">
-                                <h3>Welcome to Unifiedtransform!</h3>
-                                <p><i class="bi bi-emoji-heart-eyes"></i> Thanks for your love and support.</p>
+                                <h3>Welcome to LMS PDIH MIHU</h3>
+                                <p><i class="bi bi-emoji-heart-eyes"></i> Learning Everywhere, Every Time.</p>
                             </div>
                         </div>
                         <div class="col">
                             <div class="p-3 bg-white border rounded-3" style="height: 100%;">
-                                <h3>Manage school better</h3>
-                                <p class="text-end">with <i class="bi bi-lightning"></i> <a href="https://github.com/changeweb/Unifiedtransform" target="_blank" style="text-decoration: none;">Unifiedtransform</a> <i class="bi bi-lightning"></i>.</p>
+                                <h3>Learning Management System</h3>
+                                <p class="text-end"><a href="https://github.com/changeweb/Unifiedtransform" target="_blank" style="text-decoration: none;"> </a></p>
                             </div>
                         </div>
                     </div>
                     <div class="row mt-4">
                         <div class="col-lg-6">
                             <div class="card mb-3">
-                                <div class="card-header bg-transparent"><i class="bi bi-calendar-event me-2"></i> Events</div>
+                                <div class="card-header bg-transparent"><i class="bi bi-calendar-event me-2"></i> Acara</div>
                                 <div class="card-body text-dark">
                                     @include('components.events.event-calendar', ['editable' => 'false', 'selectable' => 'false'])
                                     {{-- <div class="overflow-auto" style="height: 250px;">
@@ -115,7 +115,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="card mb-3">
-                                <div class="card-header bg-transparent d-flex justify-content-between"><span><i class="bi bi-megaphone me-2"></i> Notices</span> {{ $notices->links() }}</div>
+                                <div class="card-header bg-transparent d-flex justify-content-between"><span><i class="bi bi-megaphone me-2"></i> Pemberitahuan</span> {{ $notices->links() }}</div>
                                 <div class="card-body p-0 text-dark">
                                     <div>
                                         @isset($notices)
@@ -134,7 +134,7 @@
                                             @endforeach
                                             @endisset
                                             @if(count($notices) < 1)
-                                                <div class="p-3">No notices</div>
+                                                <div class="p-3">Tidak ada pemberitahuan</div>
                                             @endif
                                         </div>
                                     </div>

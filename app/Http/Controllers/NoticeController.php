@@ -52,7 +52,7 @@ class NoticeController extends Controller
             $noticeRepository = new NoticeRepository();
             $noticeRepository->store($request->validated());
 
-            return back()->with('status', 'Creating Notice was successful!');
+            return back()->with('status', 'Pembuatan pemberitahuan berhasil!');
         } catch (\Exception $e) {
             return back()->withError($e->getMessage());
         }

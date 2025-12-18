@@ -10,10 +10,10 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-calendar2-week"></i> View Attendance
+                        <i class="bi bi-calendar2-week"></i> Lihat Kehadiran
                     </h1>
 
-                    <h5><i class="bi bi-person"></i> Student Name: {{$student->first_name}} {{$student->last_name}}</h5>
+                    <h5><i class="bi bi-person"></i> Nama Mahasiswa: {{$student->first_name}} {{$student->last_name}}</h5>
                     <div class="row mt-3">
                         <div class="col bg-white p-3 border shadow-sm">
                             <div id="attendanceCalendar"></div>
@@ -25,8 +25,8 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">Status</th>
-                                        <th scope="col">Date</th>
-                                        <th scope="col">Context</th>
+                                        <th scope="col">Tanggal</th>
+                                        <th scope="col">Konteks</th>
                                     </tr>
                                 </thead>
                                 <tbody>

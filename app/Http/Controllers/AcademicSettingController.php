@@ -96,7 +96,7 @@ class AcademicSettingController extends Controller
         try {
             $this->academicSettingRepository->updateAttendanceType($request->validated());
 
-            return back()->with('status', 'Attendance type update was successful!');
+            return back()->with('status', 'Pembaruan jenis kehadiran berhasil!');
         } catch (\Exception $e) {
             return back()->withError($e->getMessage());
         }
@@ -106,7 +106,7 @@ class AcademicSettingController extends Controller
         try {
             $this->academicSettingRepository->updateFinalMarksSubmissionStatus($request);
 
-            return back()->with('status', 'Final marks submission status update was successful!');
+            return back()->with('status', 'Pembaruan status pengiriman nilai akhir berhasil!');
         } catch (\Exception $e) {
             return back()->withError($e->getMessage());
         }

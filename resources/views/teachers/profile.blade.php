@@ -15,13 +15,13 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-person-lines-fill"></i> Teacher
+                        <i class="bi bi-person-lines-fill"></i> Dosen
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                          <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
-                          <li class="breadcrumb-item"><a href="{{route('teacher.list.show')}}">Teacher List</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Profile</li>
+                          <li class="breadcrumb-item"><a href="{{route('home')}}">Beranda</a></li>
+                          <li class="breadcrumb-item"><a href="{{route('teacher.list.show')}}">Daftar Dosen</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Profil</li>
                         </ol>
                     </nav>
                     <div class="mb-4">
@@ -39,46 +39,46 @@
                                         <h5 class="card-title">{{$teacher->first_name}} {{$teacher->last_name}}</h5>
                                     </div>
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">Gender: {{$teacher->gender}}</li>
-                                        <li class="list-group-item">Phone: {{$teacher->phone}}</li>
+                                        <li class="list-group-item">Jenis Kelamin: {{$teacher->gender}}</li>
+                                        <li class="list-group-item">Telpon: {{$teacher->phone}}</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-sm-8 col-md-9">
                                 <div class="p-3 mb-3 border rounded bg-white">
-                                    <h6>Teacher Information</h6>
+                                    <h6>Informasi Dosen</h6>
                                     <table class="table table-responsive mt-3">
                                         <tbody>
                                             <tr>
-                                                <th scope="row">First Name:</th>
+                                                <th scope="row">Nama depan:</th>
                                                 <td>{{$teacher->first_name}}</td>
-                                                <th>Last Name:</th>
+                                                <th scope="row">Nama belakang:</th>
                                                 <td>{{$teacher->last_name}}</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">Email:</th>
                                                 <td>{{$teacher->email}}</td>
-                                                <th scope="row">Nationality:</th>
+                                                <th scope="row">Kewarganegaraan:</th>
                                                 <td>{{$teacher->nationality}}</td>
                                             </tr>
                                             <tr>
                                             </tr>
                                             <tr>
-                                                <th scope="row">Address:</th>
+                                                <th scope="row">Alamat:</th>
                                                 <td>{{$teacher->address}}</td>
-                                                <th>Address2:</th>
+                                                <th scope="row">Alamat 2:</th>
                                                 <td>{{$teacher->address2}}</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">City:</th>
+                                                <th scope="row">Kota:</th>
                                                 <td>{{$teacher->city}}</td>
-                                                <th>Zip:</th>
+                                                <th scope="row">Kode Pos:</th>
                                                 <td>{{$teacher->zip}}</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">Phone:</th>
+                                                <th scope="row">Telpon:</th>
                                                 <td>{{$teacher->phone}}</td>
-                                                <th>Gender:</th>
+                                                <th scope="row">Jenis kelamin:</th>
                                                 <td>{{$teacher->gender}}</td>
                                             </tr>
                                             <tr>

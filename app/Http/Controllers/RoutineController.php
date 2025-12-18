@@ -63,7 +63,7 @@ class RoutineController extends Controller
             $routineRepository = new RoutineRepository();
             $routineRepository->saveRoutine($request->validated());
 
-            return back()->with('status', 'Routine save was successful!');
+            return back()->with('status', 'Penyimpanan Jadwal berhasil!');
         } catch (\Exception $e) {
             return back()->withError($e->getMessage());
         }

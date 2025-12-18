@@ -26,11 +26,11 @@
                                                     </h6>
                                                     <div class="list-group mb-2">
                                                         <a href="{{url('attendances/view?class_id='.$school_class->id.'&class_name='.$school_class->class_name.'&course_id='.$course->id.'&course_name='.$course->course_name)}}" class="list-group-item list-group-item-action  d-flex justify-content-between align-items-center">
-                                                            View Attendance
+                                                            Lihat Kehadiran
                                                             {{-- <span class="badge bg-success rounded-pill">PRESENT TODAY 38</span> --}}
                                                         </a>
                                                         <a href="{{url('attendances/take?class_id='.$school_class->id.'&class_name='.$school_class->class_name.'&course_id='.$course->id.'&course_name='.$course->course_name)}}" class="list-group-item list-group-item-action">
-                                                            Take Attendance
+                                                            Ambil Kehadiran
                                                         </a>
                                                     </div>   
                                                     @endif
@@ -49,11 +49,11 @@
                                                                 <div class="accordion-body">
                                                                     <div class="list-group mb-2">
                                                                         <a href="{{url('attendances/view?class_id='.$school_class->id.'&section_id='.$school_section->id.'&class_name='.$school_class->class_name.'&section_name='.$school_section->section_name)}}" class="list-group-item list-group-item-action  d-flex justify-content-between align-items-center">
-                                                                            View Attendance
+                                                                            Lihat Kehadiran
                                                                             {{-- <span class="badge bg-success rounded-pill">PRESENT TODAY 38</span> --}}
                                                                         </a>
                                                                         <a href="{{url('attendances/take?class_id='.$school_class->id.'&class_name='.$school_class->class_name.'&section_id='.$school_section->id.'&section_name='.$school_section->section_name)}}" class="list-group-item list-group-item-action">
-                                                                            Take Attendance
+                                                                            Ambil Kehadiran
                                                                         </a>
                                                                     </div>
                                                                 </div>

@@ -95,12 +95,14 @@ Route::middleware(['auth'])->group(function () {
         return view('teachers.add');
     })->name('teacher.create.show');
     Route::get('/teachers/edit/{id}', [UserController::class, 'editTeacher'])->name('teacher.edit.show');
+    Route::delete('/teachers/delete/{id}', [UserController::class, 'deleteTeacher'])->name('teacher.delete');
     Route::get('/teachers/view/list', [UserController::class, 'getTeacherList'])->name('teacher.list.show');
     Route::get('/teachers/view/profile/{id}', [UserController::class, 'showTeacherProfile'])->name('teacher.profile.show');
 
     //Students
     Route::get('/students/add', [UserController::class, 'createStudent'])->name('student.create.show');
     Route::get('/students/edit/{id}', [UserController::class, 'editStudent'])->name('student.edit.show');
+    Route::delete('/students/delete/{id}', [UserController::class, 'deleteStudent'])->name('student.delete');
     Route::get('/students/view/list', [UserController::class, 'getStudentList'])->name('student.list.show');
     Route::get('/students/view/profile/{id}', [UserController::class, 'showStudentProfile'])->name('student.profile.show');
     Route::get('/students/view/attendance/{id}', [AttendanceController::class, 'showStudentAttendance'])->name('student.attendance.show');

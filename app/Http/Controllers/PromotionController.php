@@ -52,7 +52,7 @@ class PromotionController extends Controller
         $previousSession = $this->schoolSessionRepository->getPreviousSession();
 
         if(count($previousSession) < 1) {
-            return back()->withError('No previous session');
+            return back()->withError('Tidak ada sesi sebelumnya');
         }
 
         $previousSessionClasses = $promotionRepository->getClasses($previousSession['id']);
@@ -144,7 +144,7 @@ class PromotionController extends Controller
             $promotionRepository = new PromotionRepository();
             $promotionRepository->massPromotion($rows);
 
-            return back()->with('status', 'Promoting students was successful!');
+            return back()->with('status', 'Promosi mahasiswa berjalan sukses!');
         } catch (\Exception $e) {
             return back()->withError($e->getMessage());
         }

@@ -45,7 +45,7 @@ class UserController extends Controller
         try {
             $this->userRepository->createTeacher($request->validated());
 
-            return back()->with('status', 'Teacher creation was successful!');
+            return back()->with('status', 'Buat dosen berhasil!');
         } catch (\Exception $e) {
             return back()->withError($e->getMessage());
         }
@@ -123,7 +123,7 @@ class UserController extends Controller
         try {
             $this->userRepository->createStudent($request->validated());
 
-            return back()->with('status', 'Student creation was successful!');
+            return back()->with('status', 'Buat mahasiswa berhasil!');
         } catch (\Exception $e) {
             return back()->withError($e->getMessage());
         }
@@ -149,7 +149,7 @@ class UserController extends Controller
         try {
             $this->userRepository->updateStudent($request->toArray());
 
-            return back()->with('status', 'Student update was successful!');
+            return back()->with('status', 'Pembaruan data mahasiswa berhasil!');
         } catch (\Exception $e) {
             return back()->withError($e->getMessage());
         }
@@ -168,7 +168,7 @@ class UserController extends Controller
         try {
             $this->userRepository->updateTeacher($request->toArray());
 
-            return back()->with('status', 'Teacher update was successful!');
+            return back()->with('status', 'Pembaruan data dosen berhasil!');
         } catch (\Exception $e) {
             return back()->withError($e->getMessage());
         }
@@ -182,5 +182,23 @@ class UserController extends Controller
         ];
 
         return view('teachers.list', $data);
+    }
+    public function deleteTeacher($id){
+        try {
+            $this->userRepository->deleteTeacher($id);
+
+            return back()->with('status', 'Hapus data dosen berhasil!');
+        } catch (\Exception $e) {
+            return back()->withError($e->getMessage());
+        }
+    }
+    public function deleteStudent($id){
+        try {
+            $this->userRepository->deleteStudent($id);
+
+            return back()->with('status', 'Hapus data mahasiswa berhasil!');
+        } catch (\Exception $e) {
+            return back()->withError($e->getMessage());
+        }
     }
 }
