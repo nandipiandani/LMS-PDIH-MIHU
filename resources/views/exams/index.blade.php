@@ -43,13 +43,14 @@
                                 </div>
                             </div>
                         </form>
-                        <div class="bg-white mt-4 p-3 border shadow-sm">
-                            <table class="table">
+                        <div class="bg-white border shadow-sm p-3 mt-4" style="border-radius: 8px;">
+                            <div class="table-container" style="overflow-x: auto;">
+                            <table class="table mb-0" style="min-width: 100%;">
                                 <thead>
                                     <tr>
                                         <th scope="col">Nama</th>
-                                        <th scope="col">Mata Pelajaran</th>
-                                        <th scope="col">Dibuat pada</th>
+                                        <th scope="col">Mata Kuliah</th>
+                                        <th scope="col">Dibuat di</th>
                                         <th scope="col">Dimulai</th>
                                         <th scope="col">Berakhir</th>
                                         <th scope="col">Tindakan</th>

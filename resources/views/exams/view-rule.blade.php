@@ -21,8 +21,8 @@
                         <table class="table table-responsive">
                             <thead>
                                 <tr>
-                                    <th scope="col">Total Nilai</th>
-                                    <th scope="col">Nilai Lulus</th>
+                                    <th scope="col">Nilai Total</th>
+                                    <th scope="col">Tanda Lulus</th>
                                     <th scope="col">Catatan Distribusi Nilai</th>
                                     <th scope="col">Tindakan</th>
                                 </tr>

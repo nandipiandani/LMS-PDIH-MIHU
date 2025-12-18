@@ -137,7 +137,13 @@ class ExamController extends Controller
      */
     public function edit(Exam $exam)
     {
-        //
+        $examRuleRepository = new ExamRuleRepository();
+        $exam_rule = $examRuleRepository->getById($request->exam_rule_id);
+        $data = [
+            'exam_rule_id'  => $request->exam_rule_id,
+            'exam_rule'     => $exam_rule,
+        ];
+        return view('exams.edit-rule', $data);
     }
 
     /**
