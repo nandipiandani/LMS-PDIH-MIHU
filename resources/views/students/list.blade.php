@@ -56,7 +56,7 @@
                                         <th scope="col">Nama Belakang</th>
                                         <th scope="col">Email</th>
                                         <th scope="col">Telpon</th>
-                                        <th scope="col">Aksi</th>
+                                        <th scope="col">Tindakan</th>
                                     </tr>
                                 </thead>
                                 <tbody>

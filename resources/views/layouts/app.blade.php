@@ -80,7 +80,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{route('password.edit')}}">
-                                        <i class="bi bi-key me-2"></i> Change Password
+                                        <i class="bi bi-key me-2"></i> Ubah Kata Sandi
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

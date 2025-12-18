@@ -8,19 +8,19 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-file-text"></i> View Grading Rule
+                        <i class="bi bi-file-text"></i> Lihat Aturan Penilaian
                     </h1>
                     @include('session-messages')
                     <div class="mb-4 mt-4">
                         <table class="table mt-4">
                             <thead>
                                 <tr>
-                                    <th scope="col">System Name</th>
-                                    <th scope="col">Points</th>
+                                    <th scope="col">Nama Sistem</th>
+                                    <th scope="col">Poin</th>
                                     <th scope="col">Grade</th>
-                                    <th scope="col">Starts At</th>
-                                    <th scope="col">Ends At</th>
-                                    <th scope="col">Actions</th>
+                                    <th scope="col">Dimulai Pada</th>
+                                    <th scope="col">Berakhir Pada</th>
+                                    <th scope="col">Tindakan</th>
                                 </tr>
                             </thead>
                             <tbody>

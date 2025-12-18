@@ -81,7 +81,7 @@
                                                         <thead>
                                                         <tr>
                                                             <th scope="col">Nama Silabus</th>
-                                                            <th scope="col">Aksi</th>
+                                                            <th scope="col">Tindakan</th>
                                                         </tr>
                                                         </thead>
                                                         <tbody>
@@ -106,7 +106,7 @@
                                                             <tr>
                                                                 <th scope="col">Nama Mata Kuliah</th>
                                                                 <th scope="col">Tipe</th>
-                                                                <th scope="col">Aksi</th>
+                                                                <th scope="col">Tindakan</th>
                                                             </tr>
                                                             </thead>
                                                             <tbody>

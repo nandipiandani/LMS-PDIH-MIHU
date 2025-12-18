@@ -7,19 +7,19 @@
         <div class="col-xs-11 col-sm-11 col-md-11 col-lg-10 col-xl-10 col-xxl-10">
             <div class="row pt-2">
                 <div class="col ps-4">
-                    <h1 class="display-6 mb-3"><i class="bi bi-distribute-vertical"></i> Exam History</h1>
+                    <h1 class="display-6 mb-3"><i class="bi bi-distribute-vertical"></i> Sejarah Ujian</h1>
                     <div class="row">
                         <div class="col-12">
                             <div class="card border-dark my-3">
                                 <div class="card-header bg-transparent border-dark">
-                                    <i class="bi bi-diagram-2"></i> Class 1
+                                    <i class="bi bi-diagram-2"></i> Kelas 1
                                 </div>
                                 <div class="card-body text-dark">
                                     <div class="accordion" id="accordionExample">
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingOne">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                                    Section #1
+                                                    Bagian #1
                                                 </button>
                                             </h2>
                                             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">

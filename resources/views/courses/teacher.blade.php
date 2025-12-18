@@ -42,7 +42,7 @@
                                         <th scope="col">Nama Mata Kuliah</th>
                                         <th scope="col">Kelas</th>
                                         <th scope="col">Bagian</th>
-                                        <th scope="col">Aksi</th>
+                                        <th scope="col">Tindakan</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -55,7 +55,7 @@
                                             <td>
                                                 <div class="btn-group">
                                                     <button type="button" class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                                      Aksi
+                                                      Tindakan
                                                     </button>
                                                     <ul class="dropdown-menu">
                                                       <li><a href="{{route('attendance.create.show', [

@@ -31,11 +31,11 @@
                         <i class="bi bi-exclamation-diamond-fill me-2"></i> Nilai telah dikirimkan.
                     </p>
                     @endif
-                    <h3><i class="bi bi-diagram-2"></i> Class #{{request()->query('class_name')}}, Section #{{request()->query('section_name')}}</h3>
-                    <h3><i class="bi bi-compass"></i> Course: {{request()->query('course_name')}}</h3>
+                    <h3><i class="bi bi-diagram-2"></i> Kelas #{{request()->query('class_name')}}, Bagian #{{request()->query('section_name')}}</h3>
+                    <h3><i class="bi bi-compass"></i> Mata Kuliah: {{request()->query('course_name')}}</h3>
                     @if (!$final_marks_submitted && count($exams) > 0 && $academic_setting['marks_submission_status'] == "on")
                         <div class="col-3 mt-3">
-                            <a type="button" href="{{route('course.final.mark.submit.show', ['class_id' => $class_id, 'class_name' => request()->query('class_name'), 'section_id' => $section_id, 'section_name' => request()->query('section_name'), 'course_id' => $course_id, 'course_name' => request()->query('course_name'), 'semester_id' => $semester_id])}}" class="btn btn-outline-primary" onclick="return confirm('Are you sure, you want to submit final marks?')"><i class="bi bi-check2"></i> Submit Final Marks</a>
+                            <a type="button" href="{{route('course.final.mark.submit.show', ['class_id' => $class_id, 'class_name' => request()->query('class_name'), 'section_id' => $section_id, 'section_name' => request()->query('section_name'), 'course_id' => $course_id, 'course_name' => request()->query('course_name'), 'semester_id' => $semester_id])}}" class="btn btn-outline-primary" onclick="return confirm('Are you sure, you want to submit final marks?')"><i class="bi bi-check2"></i> Kirim Nilai Akhir</a>
                         </div>
                     @endif
                     <form action="{{route('course.mark.store')}}" method="POST">
@@ -48,7 +48,7 @@
                                     <table class="table table-hover">
                                         <thead>
                                             <tr>
-                                            <th scope="col">Student Name</th>
+                                            <th scope="col">Nama Siswa</th>
                                             @isset($exams)
                                                 @foreach ($exams as $exam)
                                                 <th scope="col"><a href="{{route('exam.rule.show', ['exam_id' => $exam->id])}}" data-bs-toggle="tooltip" data-bs-placement="top" title="View {{$exam->exam_name}} exam rules">{{$exam->exam_name}}</a></th>
@@ -122,27 +122,27 @@
                         {{-- <div class="row justify-content-between mb-3"> --}}
                             @if(!$final_marks_submitted && count($exams) > 0)
                             <div class="col-3">
-                                <button type="submit" class="btn btn-outline-primary"><i class="bi bi-check2"></i> Save</button>
+                                <button type="submit" class="btn btn-outline-primary"><i class="bi bi-check2"></i> Simpan</button>
                             </div>
                             @else
                                 @if($final_marks_submitted)
                                 <div class="col-5">
                                     <p class="text-success">
-                                        <i class="bi bi-exclamation-diamond-fill me-2"></i> You have submitted Final Marks <i class="bi bi-stars"></i>.
+                                        <i class="bi bi-exclamation-diamond-fill me-2"></i> Anda telah mengirimkan Nilai Akhir <i class="bi bi-stars"></i>.
                                     </p>
                                 </div>
                                 @else
                                 <div class="col-5">
                                     <p class="text-primary">
-                                        <i class="bi bi-exclamation-diamond-fill me-2"></i> Create Exam to give marks.
+                                        <i class="bi bi-exclamation-diamond-fill me-2"></i> Buat Ujian untuk memberikan nilai.
                                     </p>
                                 </div>
                                 @endif
                             @endif
-                            {{-- <div class="col-3">
-                                <button type="button" class="btn btn-outline-primary"><i class="bi bi-check2"></i> Submit Marks</button>
-                            </div> --}}
-                        {{-- </div> --}}
+                            <div class="col-3">
+                                <button type="button" class="btn btn-outline-primary"><i class="bi bi-check2"></i> Kirim Nilai</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

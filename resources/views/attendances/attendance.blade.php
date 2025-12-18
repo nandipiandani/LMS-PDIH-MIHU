@@ -34,9 +34,9 @@
                                         <tr>
                                             <td>
                                                 @if ($attendance->status == "on")
-                                                    <span class="badge bg-success">PRESENT</span>
+                                                    <span class="badge bg-success">HADIR</span>
                                                 @else
-                                                    <span class="badge bg-danger">ABSENT</span>
+                                                    <span class="badge bg-danger">ABSEN</span>
                                                 @endif
                                                 
                                             </td>

@@ -8,15 +8,15 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-file-text"></i> Exams
+                        <i class="bi bi-file-text"></i> Ujian
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Exam</li>
+                            <li class="breadcrumb-item"><a href="{{route('home')}}">Beranda</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Ujian</li>
                         </ol>
                     </nav>
-                    <h6>Filter list by:</h6>
+                    <h6>Filter daftar berdasarkan:</h6>
                     <div class="mb-4 mt-4">
                         <form action="{{route('exam.list.show')}}" method="GET">
                             <div class="row">
@@ -39,7 +39,7 @@
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <button type="submit" class="btn btn-primary"><i class="bi bi-arrow-counterclockwise"></i> Load List</button>
+                                    <button type="submit" class="btn btn-primary"><i class="bi bi-arrow-counterclockwise"></i> Daftar Muat</button>
                                 </div>
                             </div>
                         </form>
@@ -47,12 +47,12 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Course</th>
-                                        <th scope="col">Created at</th>
-                                        <th scope="col">Starts</th>
-                                        <th scope="col">Ends</th>
-                                        <th scope="col">Actions</th>
+                                        <th scope="col">Nama</th>
+                                        <th scope="col">Mata Pelajaran</th>
+                                        <th scope="col">Dibuat pada</th>
+                                        <th scope="col">Dimulai</th>
+                                        <th scope="col">Berakhir</th>
+                                        <th scope="col">Tindakan</th>
                                     </tr>
                                 </thead>
                                 <tbody>

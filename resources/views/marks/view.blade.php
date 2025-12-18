@@ -19,18 +19,18 @@
                                     <thead>
                                         <tr>
                                         <th scope="col">#ID</th>
-                                        <th scope="col">Full Name</th>
+                                        <th scope="col">Nama Lengkap</th>
                                         <th scope="col">Quiz 1</th>
                                         <th scope="col">Quiz 2</th>
                                         <th scope="col">Quiz 1</th>
                                         <th scope="col">Quiz 2</th>
-                                        <th scope="col">Midterm</th>
+                                        <th scope="col">Paruh waktu</th>
                                         <th scope="col">Quiz 3</th>
                                         <th scope="col">Quiz 4</th>
-                                        <th scope="col">Assignment 1</th>
-                                        <th scope="col">Assignment 2</th>
-                                        <th scope="col">Practical</th>
-                                        <th scope="col">Final</th>
+                                        <th scope="col">Penugasan 1</th>
+                                        <th scope="col">Penugasan 2</th>
+                                        <th scope="col">Praktik</th>
+                                        <th scope="col">Akhir</th>
                                         </tr>
                                     </thead>
                                     <tbody>

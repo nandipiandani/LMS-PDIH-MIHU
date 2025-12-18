@@ -22,7 +22,7 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">Nama Mata Kuliah</th>
-                                        <th scope="col">Aksi</th>
+                                        <th scope="col">Tindakan</th>
                                     </tr>
                                 </thead>
                                 <tbody>

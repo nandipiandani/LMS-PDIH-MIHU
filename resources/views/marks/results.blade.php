@@ -8,7 +8,7 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-cloud-sun"></i> View Results
+                        <i class="bi bi-cloud-sun"></i> Lihat Hasil
                     </h1>
                     <h6>Filter list by:</h6>
                     <div class="mb-4 mt-4">
@@ -26,7 +26,7 @@
                                 <div class="col">
                                     <select onchange="getSectionsAndCourses(this);" class="form-select" name="class_id" aria-label="Class">
                                         @isset($classes)
-                                            <option selected disabled>Please select a class</option>
+                                            <option selected disabled>Silakan pilih kelas</option>
                                             @foreach ($classes as $school_class)
                                                 <option value="{{$school_class->id}}">{{$school_class->class_name}}</option>
                                             @endforeach
@@ -51,10 +51,10 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">Photo</th>
-                                        <th scope="col">Student Name</th>
-                                        <th scope="col">Total Marks</th>
-                                        <th scope="col">Grade Points</th>
-                                        <th scope="col">Grade</th>
+                                        <th scope="col">Nama Siswa</th>
+                                        <th scope="col">Total Nilai</th>
+                                        <th scope="col">Poin Nilai</th>
+                                        <th scope="col">Nilai</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -90,7 +90,7 @@
         .then(function(data) {
             var sectionSelect = document.getElementById('section-select');
             sectionSelect.options.length = 0;
-            data.sections.unshift({'id': 0,'section_name': 'Please select a section'})
+            data.sections.unshift({'id': 0,'section_name': 'Silakan pilih satu bagian'})
             data.sections.forEach(function(section, key) {
                 sectionSelect[key] = new Option(section.section_name, section.id);
             });

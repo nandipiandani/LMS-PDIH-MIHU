@@ -8,7 +8,7 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-cloud-sun"></i> Give Final Marks
+                        <i class="bi bi-cloud-sun"></i> Berikan Nilai Akhir
                     </h1>
                     @include('session-messages')
                     <h5><i class="bi bi-diagram-2"></i> Class {{$class_name}}, Section #{{$section_name}}</h5>
@@ -23,10 +23,10 @@
                                     <table class="table table-hover">
                                         <thead>
                                             <tr>
-                                                <th scope="col">Student Name</th>
-                                                <th scope="col">Calculated Marks</th>
-                                                <th scope="col">Final Marks</th>
-                                                <th scope="col">Note</th>
+                                                <th scope="col">Nama Siswa</th>
+                                                <th scope="col">Total Nilai</th>
+                                                <th scope="col">Nilai Akhir</th>
+                                                <th scope="col">Catatan</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -59,7 +59,7 @@
                             
                         </div>
                         <div class="col-3">
-                            <button type="submit" class="btn btn-outline-primary"><i class="bi bi-check2"></i> Save</button>
+                            <button type="submit" class="btn btn-outline-primary"><i class="bi bi-check2"></i> Simpan</button>
                         </div>
                     </form>
                 </div>

@@ -8,13 +8,13 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-journal-medical"></i> Syllabus
+                        <i class="bi bi-journal-medical"></i> Silabus
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
-                            <li class="breadcrumb-item"><a href="{{url()->previous()}}">Courses</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Syllabus</li>
+                            <li class="breadcrumb-item"><a href="{{route('home')}}">Beranda</a></li>
+                            <li class="breadcrumb-item"><a href="{{url()->previous()}}">Mata Kuliah</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Silabus</li>
                         </ol>
                     </nav>
                     <div class="mb-4 mt-4">
@@ -23,7 +23,7 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">Nama Silabus</th>
-                                        <th scope="col">Aksi</th>
+                                        <th scope="col">Tindakan</th>
                                     </tr>
                                 </thead>
                                 <tbody>

@@ -8,11 +8,11 @@
             <div class="row pt-2">
                 <div class="col ps-4">
                     <h1 class="display-6 mb-3">
-                        <i class="bi bi-person-lines-fill"></i> Promote Students
+                        <i class="bi bi-person-lines-fill"></i> Promosikan Mahasiswa
                     </h1>
                     @include('session-messages')
                     <p class="text-danger">
-                        <small><i class="bi bi-exclamation-diamond-fill me-2"></i> Students must be promoted only once to a new Session. Ususally, Admin will create a New Session once Academic activity ends for the Current Session.</small>
+                        <small><i class="bi bi-exclamation-diamond-fill me-2"></i> Mahasiswa hanya dapat dipromosikan satu kali ke Sesi baru. Biasanya, Admin akan membuat Sesi Baru setelah kegiatan Akademik untuk Sesi Saat Ini berakhir.</small>
                     </p>
                     <div class="mb-4 mt-4">
                         <form action="{{route('promotions.store')}}" method="POST">
@@ -20,13 +20,13 @@
                             <table class="table mt-4">
                                 <thead>
                                     <tr>
-                                        <th scope="col">#ID Card Number</th>
-                                        <th scope="col">First Name</th>
-                                        <th scope="col">Last Name</th>
-                                        <th scope="col">Previous Class</th>
-                                        <th scope="col">Previous Section</th>
-                                        <th scope="col">Promoting to Class</th>
-                                        <th scope="col">Promoting to Section</th>
+                                        <th scope="col">#Nomor ID Card</th>
+                                        <th scope="col">Nama Depan</th>
+                                        <th scope="col">Nama Belakang</th>
+                                        <th scope="col">Kelas Sebelumnya</th>
+                                        <th scope="col">Bagian Sebelumnya</th>
+                                        <th scope="col">Promosikan ke Kelas</th>
+                                        <th scope="col">Promosikan ke Bagian</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -43,7 +43,7 @@
                                             <td>
                                                 <select onchange="getSections(this, {{$index}});" class="form-select form-select-sm" id="inputAssignToClass{{$index}}" name="class_id[{{$index}}]" required>
                                                     @isset($school_classes)
-                                                        <option selected disabled>Please select a class</option>
+                                                        <option selected disabled>Silakan pilih kelas</option>
                                                         @foreach ($school_classes as $school_class)
                                                             <option value="{{$school_class->id}}">{{$school_class->class_name}}</option>
                                                         @endforeach
@@ -59,7 +59,7 @@
                                     @endisset
                                 </tbody>
                             </table>
-                            <button type="submit" class="btn btn-outline-primary mb-3"><i class="bi bi-sort-numeric-up-alt"></i> Promote</button>
+                            <button type="submit" class="btn btn-outline-primary mb-3"><i class="bi bi-sort-numeric-up-alt"></i> Promosikan</button>
                         </form>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
         .then(function(data) {
             var sectionSelect = document.getElementById('inputAssignToSection'+index);
             sectionSelect.options.length = 0;
-            data.sections.unshift({'id': 0,'section_name': 'Please select a section'})
+            data.sections.unshift({'id': 0,'section_name': 'Silakan pilih satu bagian'})
             data.sections.forEach(function(section, key) {
                 sectionSelect[key] = new Option(section.section_name, section.id);
             });

@@ -7,7 +7,7 @@
         <div class="col-xs-11 col-sm-11 col-md-11 col-lg-10 col-xl-10 col-xxl-10">
             <div class="row pt-2">
                 <div class="col ps-4">
-                    <h1 class="display-6 mb-3"><i class="bi bi-calendar2-week"></i> Attendance</h1>
+                    <h1 class="display-6 mb-3"><i class="bi bi-calendar2-week"></i> Kehadiran</h1>
                     <div class="row">
                         <div class="col">
                             <div class="row">
@@ -27,7 +27,7 @@
                                                     <div class="list-group mb-2">
                                                         <a href="{{url('attendances/view?class_id='.$school_class->id.'&class_name='.$school_class->class_name.'&course_id='.$course->id.'&course_name='.$course->course_name)}}" class="list-group-item list-group-item-action  d-flex justify-content-between align-items-center">
                                                             Lihat Kehadiran
-                                                            {{-- <span class="badge bg-success rounded-pill">PRESENT TODAY 38</span> --}}
+                                                            {{-- <span class="badge bg-success rounded-pill">HARI INI 38</span> --}}
                                                         </a>
                                                         <a href="{{url('attendances/take?class_id='.$school_class->id.'&class_name='.$school_class->class_name.'&course_id='.$course->id.'&course_name='.$course->course_name)}}" class="list-group-item list-group-item-action">
                                                             Ambil Kehadiran
@@ -50,7 +50,7 @@
                                                                     <div class="list-group mb-2">
                                                                         <a href="{{url('attendances/view?class_id='.$school_class->id.'&section_id='.$school_section->id.'&class_name='.$school_class->class_name.'&section_name='.$school_section->section_name)}}" class="list-group-item list-group-item-action  d-flex justify-content-between align-items-center">
                                                                             Lihat Kehadiran
-                                                                            {{-- <span class="badge bg-success rounded-pill">PRESENT TODAY 38</span> --}}
+                                                                            {{-- <span class="badge bg-success rounded-pill">HARI INI 38</span> --}}
                                                                         </a>
                                                                         <a href="{{url('attendances/take?class_id='.$school_class->id.'&class_name='.$school_class->class_name.'&section_id='.$school_section->id.'&section_name='.$school_section->section_name)}}" class="list-group-item list-group-item-action">
                                                                             Ambil Kehadiran
