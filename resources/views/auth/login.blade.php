@@ -9,9 +9,9 @@
                 <!-- Header dengan gradient kuning -->
                 <div class="card-header text-center py-3" style="background: linear-gradient(135deg, #c00000 0%, #ffd900 100%);">
                     <h4 class="mb-0 text-white fw-bold">
-                        <i class="bi bi-book me-2"></i>{{ config('app.name', 'LMS PDIH MIHU') }}
+                        <i class="bi bi-book me-2"></i>{{ config('app.name', 'LMS MIHU') }}
                     </h4>
-                    <p class="mb-0 text-white opacity-75 mt-1">Sistem Manajemen Akademik</p>
+                    <p class="mb-0 text-white opacity-75 mt-1">Learning Management System</p>
                 </div>
 
                 <div class="card-body p-4">
