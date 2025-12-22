@@ -221,7 +221,7 @@
                                                 aria-controls="flush-collapse{{$notice->id}}"
                                                 style="border-radius: 0;">
                                             <div class="d-flex w-100 align-items-center">
-                                                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                                <div class="sidebar-icon">
                                                     <i class="bi bi-megaphone text-primary"></i>
                                                 </div>
                                                 <div class="flex-grow-1 text-start">
