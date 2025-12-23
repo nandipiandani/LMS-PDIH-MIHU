@@ -24,7 +24,7 @@
                             <div class="sidebar-icon">
                                 <i class="bi bi-grid fs-5"></i>
                             </div>
-                            <span class="sidebar-text ms-3">{{ __('Dashboard') }}</span>
+                            <span class="sidebar-text ms-3">{{ __('Beranda') }}</span>
                         </div>
                     </a>
                 </div>

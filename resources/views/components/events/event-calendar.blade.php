@@ -1,184 +1,103 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
 <style>
-/* ===============================
-   FULLCALENDAR v3 – MODERN UI
-   LMS MIHU (Red–Yellow Theme)
-================================ */
-
-/* Container */
 #full_calendar_events {
-    background: #ffffff;
-    border-radius: 18px;
-    padding: 20px;
-    box-shadow: 0 15px 35px rgba(220, 38, 38, 0.08);
+    background: #fff;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 12px 30px rgba(220,38,38,.15);
 }
-
-/* Header */
-.fc-toolbar {
-    margin-bottom: 20px;
-}
-
 .fc-center h2 {
-    font-size: 1.6rem;
     font-weight: 700;
-    color: #111827;
+    color: #7c2d12;
 }
-
-/* Buttons */
 .fc button {
-    background: #ffffff;
+    border-radius: 10px;
     border: 1px solid #fde68a;
-    color: #9a3412;
-    border-radius: 12px;
-    padding: 6px 16px;
-    font-weight: 500;
-    transition: all 0.25s ease;
+    background: #fff;
+    color: #92400e;
 }
-
 .fc button:hover,
 .fc-state-active {
-    background: linear-gradient(135deg, #dc2626, #f59e0b);
-    color: #ffffff;
-    box-shadow: 0 6px 15px rgba(220, 38, 38, 0.35);
+    background: linear-gradient(135deg,#dc2626,#f59e0b);
+    color: #fff;
 }
-
-/* Calendar Grid */
-.fc-view-container {
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid #fee2e2;
-}
-
-/* Day header */
-.fc th {
-    background: #fff7ed;
-    color: #9a3412;
-    font-weight: 600;
-    padding: 10px 0;
-    border: none;
-}
-
-/* Day cells */
-.fc td {
-    border-color: #f3f4f6;
-}
-
-.fc-day:hover {
-    background: #fff7ed;
-}
-
-/* Today */
-.fc-today {
-    background: linear-gradient(
-        135deg,
-        rgba(220, 38, 38, 0.12),
-        rgba(245, 158, 11, 0.12)
-    ) !important;
-    border-radius: 12px;
-}
-
-/* Date number */
-.fc-day-number {
-    font-weight: 600;
-    color: #374151;
-    padding: 6px;
-}
-
-/* Events */
 .fc-event {
     border: none !important;
-    border-radius: 12px;
-    padding: 4px 8px;
-    font-size: 0.78rem;
-    font-weight: 500;
-    background: linear-gradient(135deg, #dc2626, #f59e0b);
-    color: #ffffff !important;
-    box-shadow: 0 6px 15px rgba(220, 38, 38, 0.3);
-}
-
-/* Event hover */
-.fc-event:hover {
-    transform: scale(1.04);
-    box-shadow: 0 10px 25px rgba(220, 38, 38, 0.45);
-}
-
-/* More link */
-.fc-more {
-    color: #dc2626;
+    border-radius: 10px;
+    background: linear-gradient(135deg,#dc2626,#f59e0b);
+    color: #fff !important;
     font-weight: 600;
-}
-
-/* Week / Day view */
-.fc-agenda-view .fc-axis {
-    color: #9ca3af;
-}
-
-.fc-agenda-slots tr {
-    height: 48px;
-}
-
-/* Selection */
-.fc-highlight {
-    background: rgba(245, 158, 11, 0.25);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    #full_calendar_events {
-        padding: 14px;
-    }
-
-    .fc-toolbar {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .fc-center h2 {
-        font-size: 1.3rem;
-    }
 }
 </style>
 
-<div id='full_calendar_events'></div>
+<div id="full_calendar_events"></div>
 
-<div class="modal fade" id="eventModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content rounded-4">
+<div class="modal fade" id="createEventModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
 
-            <div class="modal-header"
-                 style="background:linear-gradient(135deg,#dc2626,#f59e0b)">
-                <h5 class="text-white mb-0">Detail Acara</h5>
-                <button class="btn-close btn-close-white"
-                        data-bs-dismiss="modal"></button>
-            </div>
+      <div class="modal-header bg-warning text-dark">
+        <h5 class="modal-title">Tambah Event</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
 
-            <div class="modal-body">
-                <input type="hidden" id="modal_event_id">
+      <div class="modal-body">
+        <input type="hidden" id="create_event_start">
+        <input type="hidden" id="create_event_end">
 
-                <label>Judul</label>
-                <input id="modal_event_title" class="form-control mb-2">
-
-                <label>Deskripsi</label>
-                <textarea id="modal_event_description"
-                          class="form-control mb-2"></textarea>
-
-                <label>Mulai</label>
-                <input id="modal_event_start" class="form-control mb-2" disabled>
-
-                <label>Selesai</label>
-                <input id="modal_event_end" class="form-control" disabled>
-            </div>
-
-            <div class="modal-footer">
-                <button class="btn btn-danger" id="deleteEventBtn">Hapus</button>
-                <button class="btn btn-warning" id="saveEventBtn">Simpan</button>
-            </div>
-
+        <div class="mb-3">
+          <label>Judul Event</label>
+          <input id="create_event_title" class="form-control">
         </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button id="saveCreateEventBtn" class="btn btn-warning">Simpan</button>
+      </div>
+
     </div>
+  </div>
+</div>
+
+<!-- MODAL EDIT -->
+<div class="modal fade" id="editEventModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">Edit Event</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <input type="hidden" id="edit_event_id">
+
+        <div class="mb-3">
+          <label>Judul</label>
+          <input id="edit_event_title" class="form-control">
+        </div>
+
+        <div class="mb-3">
+          <label>Mulai</label>
+          <input id="edit_event_start" type="date" class="form-control">
+        </div>
+
+        <div class="mb-3">
+          <label>Selesai</label>
+          <input id="edit_event_end" type="date" class="form-control">
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="deleteEventBtn" class="btn btn-danger">Hapus</button>
+        <button id="updateEventBtn" class="btn btn-warning">Simpan</button>
+      </div>
+
+    </div>
+  </div>
 </div>
 
 
@@ -186,56 +105,138 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
 $(document).ready(function () {
 
     var SITEURL = "{{ url('/') }}";
 
     $.ajaxSetup({
-        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
+        headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') }
     });
 
-    $('#full_calendar_events').fullCalendar({
+    /* ================= CALENDAR INIT ================= */
+    var calendar = $('#full_calendar_events').fullCalendar({
         header: {
             left: 'prev,next',
             center: 'title',
             right: 'month,agendaWeek,agendaDay'
         },
+
+        height: {{ ($editable=='true') ? 500 : 'parent' }},
+        selectable: {{ $selectable }},
+        editable: {{ $editable }},
+        eventLimit: true,
         events: SITEURL + '/calendar-event',
 
+        displayEventTime: false,
+
+        /* ========== CREATE ========== */
+        select: function (start) {
+
+            $('#create_event_title').val('');
+            $('#create_event_start').val(moment(start).format('YYYY-MM-DD'));
+
+            $('#createEventModal').modal('show');
+            calendar.fullCalendar('unselect');
+        },
+
+        /* ========== EDIT ========== */
         eventClick: function (event) {
-            $('#modal_event_id').val(event.id);
-            $('#modal_event_title').val(event.title);
-            $('#modal_event_description').val(event.description || '');
-            $('#modal_event_start').val(moment(event.start).format('DD MMM YYYY HH:mm'));
-            $('#modal_event_end').val(moment(event.end).format('DD MMM YYYY HH:mm'));
-            $('#eventModal').modal('show');
+
+            $('#edit_event_id').val(event.id);
+            $('#edit_event_title').val(event.title);
+
+            $('#edit_event_start').val(
+                moment(event.start).format('YYYY-MM-DD')
+            );
+
+            $('#edit_event_end').val(
+                event.end
+                    ? moment(event.end).subtract(1,'days').format('YYYY-MM-DD')
+                    : moment(event.start).format('YYYY-MM-DD')
+            );
+
+            $('#editEventModal').modal('show');
         }
     });
 
-    $('#saveEventBtn').click(function () {
-        $.post(SITEURL + '/calendar-crud-ajax', {
-            id: $('#modal_event_id').val(),
-            title: $('#modal_event_title').val(),
-            description: $('#modal_event_description').val(),
-            type: $('#modal_event_id').val() ? 'edit' : 'create'
-        }, function () {
-            $('#full_calendar_events').fullCalendar('refetchEvents');
-            toastr.success('Acara disimpan');
-            $('#eventModal').modal('hide');
-        });
-    });
+    /* ================= CREATE SAVE ================= */
+    $('#saveCreateEventBtn').on('click', function () {
 
-    $('#deleteEventBtn').click(function () {
-        $.post(SITEURL + '/calendar-crud-ajax', {
-            id: $('#modal_event_id').val(),
-            type: 'delete'
-        }, function () {
-            $('#full_calendar_events').fullCalendar('removeEvents', $('#modal_event_id').val());
-            toastr.success('Acara dihapus');
-            $('#eventModal').modal('hide');
-        });
+    let title = $('#create_event_title').val();
+    let start = $('#create_event_start').val();
+
+    if (!title) {
+        alert('Judul wajib diisi');
+        return;
+    }
+
+    $('#createEventModal').modal('hide');
+
+    $.post(SITEURL + '/calendar-crud-ajax', {
+        title: title,
+        start: start,
+        end: moment(start).add(1,'days').format('YYYY-MM-DD'),
+        allDay: true,
+        type: 'create'
+    }, function () {
+
+        calendar.fullCalendar('removeEventSources');
+        calendar.fullCalendar('addEventSource', SITEURL + '/calendar-event');
+
+        toastr.success('Event ditambahkan');
     });
+});
+
+
+    /* ================= UPDATE ================= */
+    $('#updateEventBtn').on('click', function () {
+
+    let start = $('#edit_event_start').val();
+    let end   = $('#edit_event_end').val() || start;
+
+    $('#editEventModal').modal('hide');
+
+    $.post(SITEURL + '/calendar-crud-ajax', {
+        id: $('#edit_event_id').val(),
+        title: $('#edit_event_title').val(),
+        start: start,
+        end: moment(end).add(1,'days').format('YYYY-MM-DD'),
+        allDay: true,
+        type: 'edit'
+    }, function () {
+
+        calendar.fullCalendar('removeEventSources');
+        calendar.fullCalendar('addEventSource', SITEURL + '/calendar-event');
+
+        toastr.success('Event diperbarui');
+    });
+});
+
+
+    /* ================= DELETE ================= */
+    $('#deleteEventBtn').on('click', function () {
+
+    if (!confirm('Hapus event ini?')) return;
+
+    $('#editEventModal').modal('hide');
+
+    $.post(SITEURL + '/calendar-crud-ajax', {
+        id: $('#edit_event_id').val(),
+        type: 'delete'
+    }, function () {
+
+        calendar.fullCalendar('removeEventSources');
+        calendar.fullCalendar('addEventSource', SITEURL + '/calendar-event');
+
+        toastr.success('Event dihapus');
+    });
+});
 
 });
 </script>
+
+
+
